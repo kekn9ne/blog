@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: "Tech Blog | Programming & Development"
 description: "A personal tech blog sharing insights about programming, development, and technology. Follow my journey through GitHub projects and tech discussions."
 ---
 
@@ -12,7 +13,7 @@ description: "A personal tech blog sharing insights about programming, developme
 
 I share insights about programming, development, and technology. From coding tutorials to tech deep dives, join me in exploring the world of modern development.
 
-[Check out my projects on GitHub](https://github.com/{{ site.github_username }}) or [follow me on Twitter](https://twitter.com/{{ site.twitter_username }}) for regular updates.
+[Check out my GitHub](https://github.com/{{ site.github_username }}) [Follow me on Twitter](https://twitter.com/{{ site.twitter_username }})
 
 ---
 
