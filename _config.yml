@@ -57,5 +57,5 @@ plugins:
 
 # Comments settings
 cusdis:
-  app_id: "YOUR-APP-ID-HERE" # Replace this with the app_id from your Cusdis admin panel
+  app_id: "8def4212-5f52-4205-900b-a0af219a1d42" # Replace this with the app_id from your Cusdis admin panel
   host: "https://blog.kekn9ne.duckdns.org"
