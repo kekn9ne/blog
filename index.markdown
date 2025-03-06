@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: "Kekn9ne's Personal Blog"
+title: "Welcome to My Blog"
 description: "Welcome to my tech blog! Sharing insights about programming, development, and my journey through code. Follow along for projects, tutorials, and tech discussions."
 ---
 
