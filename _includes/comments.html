@@ -5,11 +5,14 @@
   <div id="commento"></div>
   <script defer src="https://yourblog-comments.duckdns.org/js/commento.js"></script>
   <script>
-    // Configure Commento theme
+    // Configure Commento theme and page-specific settings
     window.commento = {
       theme: 'dark',
       hideDeleted: true,
-      autoInit: true
+      autoInit: true,
+      // Use page-specific identifiers
+      pageId: '{{ page.url | absolute_url }}',
+      pageTitle: '{{ page.title | escape }}'
     }
   </script>
 </div>
