@@ -2,7 +2,7 @@
 <div class="comments">
   <h2 class="comments-title">Comments</h2>
   
-  <section id="isso-thread" data-isso-id="{{ page.url }}"></section>
+  <section id="isso-thread" data-isso-id="{{ page.url | relative_url }}"></section>
 
   <script data-isso="https://yourblog-comments.duckdns.org"
           data-isso-css="true"
@@ -15,6 +15,7 @@
           data-isso-reply-notifications="true"
           data-isso-require-author="true"
           data-isso-vote-levels=""
+          data-isso-host="https://kekn9ne.github.io/blog"
           src="https://yourblog-comments.duckdns.org/js/embed.min.js"></script>
 </div>
 {%- endif -%} 
