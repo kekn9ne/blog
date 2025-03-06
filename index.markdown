@@ -4,7 +4,7 @@
 
 layout: home
 title: "Kekn9ne's Personal Blog"
-description: "A personal tech blog sharing insights about programming, development, and technology. Follow my journey through GitHub projects and tech discussions."
+description: "Welcome to my tech blog! Sharing insights about programming, development, and my journey through code. Follow along for projects, tutorials, and tech discussions."
 ---
 
 # Kekn9ne's Personal Blog
