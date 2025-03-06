@@ -751,6 +751,19 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
+.no-comments {
+  text-align: center;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 2rem;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  margin: 2rem 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
 /* Individual Comments */
 .comment {
   margin-bottom: 2rem;
