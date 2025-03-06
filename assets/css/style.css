@@ -751,6 +751,11 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
+#disqus_thread {
+  margin-top: 2rem;
+  min-height: 300px;
+}
+
 .no-comments {
   text-align: center;
   color: var(--text-dim);

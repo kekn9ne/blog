@@ -55,7 +55,6 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# Staticman Settings
-staticman:
-  branch: "main"    # The branch to receive comments (defaults to "main")
-  endpoint: "https://api.staticman.net/v3/entry/github"
+# Comments settings
+disqus:
+  shortname: my-blog-x9mq1q9qbl  # Replace this with your actual Disqus shortname
