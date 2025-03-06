@@ -2,7 +2,13 @@
 layout: post
 title: "Welcome to My Digital Garden"
 date: 2024-03-26 12:00:00 +0000
+author: kekn9ne
+description: "Join me on a journey through technology, programming, and personal growth. Discover tech deep dives, coding adventures, and insights about modern development."
 categories: [personal, technology]
+tags: [welcome, technology, programming, personal-growth, blog]
+twitter:
+  card: summary_large_image
+locale: en_US
 comments: true
 ---
 
