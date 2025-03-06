@@ -3,9 +3,21 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: "Welcome to My Personal Tech Blog"
+description: "A personal tech blog sharing insights about programming, development, and technology. Follow my journey through GitHub projects and tech discussions."
 ---
 
-# Welcome!👋
+# Welcome to My Personal Tech Blog
+
+## Follow my journey on GitHub and Twitter
+
+I share insights about programming, development, and technology. From coding tutorials to tech deep dives, join me in exploring the world of modern development.
+
+[Check out my projects on GitHub](https://github.com/{{ site.github_username }}) or [follow me on Twitter](https://twitter.com/{{ site.twitter_username }}) for regular updates.
+
+---
+
+## Latest Posts
 
 🌱 A personal space where I share my journey through technology, programming, and life experiences. Here you'll find tech deep dives, coding adventures, and thoughts on personal growth.
 
