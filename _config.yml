@@ -155,9 +155,18 @@ prose:
 defaults:
   - scope:
       path: ""
+      type: "posts"
     values:
-      sitemap: true
-      lastmod: site.time
+      sitemap:
+        changefreq: "weekly"
+        priority: 0.8
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      sitemap:
+        changefreq: "monthly"
+        priority: 0.5
 
 # URL handling
 url: "https://kekn9ne.github.io"

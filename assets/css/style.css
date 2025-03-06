@@ -1079,4 +1079,83 @@ img {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
   }
+}
+
+/* About Page Styles */
+.page-content h1,
+.page-content h2 {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  position: relative;
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.page-content h1::after,
+.page-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--accent), transparent);
+}
+
+.page-content pre {
+  background: var(--card);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 
+    0 0 10px var(--glow),
+    0 0 15px var(--glow),
+    inset 0 0 5px var(--glow);
+}
+
+.terminal-effect {
+  font-family: var(--font-mono);
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  animation: scanline 2s linear infinite;
+}
+
+.terminal-effect .prompt {
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+.terminal-effect .cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 } 
