@@ -3,7 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: "Welcome to My Personal Tech Blog"
 description: "A personal tech blog sharing insights about programming, development, and technology. Follow my journey through GitHub projects and tech discussions."
 ---
 
