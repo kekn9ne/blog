@@ -56,5 +56,6 @@ plugins:
 #   - vendor/ruby/
 
 # Comments settings
-disqus:
-  shortname: my-blog-x9mq1q9qbl  # Replace this with your actual Disqus shortname
+matrix:
+  instance: "https://matrix.cactus.chat:8448"
+  siteName: "{{ site.github_username }}"

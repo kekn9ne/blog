@@ -751,125 +751,66 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
-#disqus_thread {
+/* Cactus Comments Custom Styling */
+.cactus-comments-container {
   margin-top: 2rem;
-  min-height: 300px;
 }
 
-.no-comments {
-  text-align: center;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  padding: 2rem;
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
-  margin: 2rem 0;
-  animation: fadeIn 0.5s ease-out forwards;
+.cactus-comment {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  margin-bottom: 1rem !important;
+  padding: 1rem !important;
 }
 
-/* Individual Comments */
-.comment {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
-  animation: fadeInUp 0.5s ease-out forwards;
+.cactus-comment-header {
+  font-family: var(--font-mono) !important;
+  color: var(--text-dim) !important;
 }
 
-.comment-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
+.cactus-comment-content {
+  font-family: var(--font-main) !important;
+  color: var(--text) !important;
+  line-height: 1.8 !important;
 }
 
-.comment-author {
-  color: var(--accent);
-  font-weight: 500;
+.cactus-comment-avatar {
+  border-radius: 4px !important;
 }
 
-.comment-date {
-  color: var(--text-dim);
+.cactus-button {
+  background: transparent !important;
+  color: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  padding: 0.5rem 1rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.9rem !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
 }
 
-.comment-content {
-  font-family: var(--font-main);
-  line-height: 1.8;
-  color: var(--text);
-  letter-spacing: 0.05em;
+.cactus-button:hover {
+  background: var(--accent) !important;
+  color: var(--bg-color) !important;
+  box-shadow: 0 0 15px var(--glow) !important;
 }
 
-.comment-content p {
-  margin: 0.5rem 0;
+.cactus-editor-textarea {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+  color: var(--text) !important;
+  font-family: var(--font-main) !important;
+  padding: 1rem !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Comment Form */
-.comment-form {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--text-dim);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text);
-  font-family: var(--font-main);
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 10px var(--glow);
-}
-
-.form-group button {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  padding: 0.8rem 2rem;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.form-group button:hover {
-  background: var(--accent);
-  color: var(--bg-color);
-  box-shadow: 0 0 15px var(--glow);
-}
-
-.comment-notice {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
+.cactus-editor-textarea:focus {
+  outline: none !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 10px var(--glow) !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -882,13 +823,8 @@ img {
     font-size: 1.25rem;
   }
 
-  .comment {
-    padding: 1rem;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    padding: 0.6rem;
+  .cactus-comment {
+    padding: 0.8rem !important;
   }
 }
 

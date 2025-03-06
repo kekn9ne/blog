@@ -2,19 +2,19 @@
 <div class="comments">
   <h2 class="comments-title">Comments</h2>
   
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = '{{ site.url }}{{ page.url }}';
-      this.page.identifier = '{{ page.url }}';
-    };
-    (function() {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <div class="cactus-comments-container">
+    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+    <div id="comment-section"></div>
+    <script>
+      initComments({
+        node: document.getElementById("comment-section"),
+        defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+        serverName: "cactus.chat",
+        siteName: "{{ site.github_username }}", 
+        commentSectionId: "{{ page.url | slugify }}"
+      })
+    </script>
+  </div>
 </div>
 {%- endif -%} 
