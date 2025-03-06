@@ -56,7 +56,7 @@ locale: en_US
 
 # Webmaster Verifications
 webmaster_verifications:
-  google: tnGy3mr_eg3Y6563BQeT_kI9ykoFE1ktKLPFnE2upug  # Get from Google Search Console
+  google: rHRMPnXg71SiALT-UWkSNjxeYvXeGgeAj_RpIHjDR8Y  # Get from Google Search Console
   bing: YOUR_BING_VERIFICATION_CODE      # Get from Bing Webmaster Tools
   yandex: YOUR_YANDEX_VERIFICATION_CODE  # Optional: Get from Yandex Webmaster
   baidu: YOUR_BAIDU_VERIFICATION_CODE    # Optional: Get from Baidu Webmaster
