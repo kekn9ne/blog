@@ -14,8 +14,9 @@
       page_title: '{{ page.title }}',
       url: '{{ page.url | absolute_url }}',
       locale: 'en',
-      show_email_subscription: false,
-      simple_view: false
+      show_email_subscription: true,
+      simple_view: false,
+      auth_providers: ['google', 'github', 'email', 'anonymous']
     };
 
     (function(c) {
