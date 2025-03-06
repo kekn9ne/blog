@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Basic SEO -->
-  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }} | Personal Blog</title>
+  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="Welcome to {{ site.title }} - {{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="author" content="{{ page.author | default: site.author.name }}">
   {% if page.tags %}
