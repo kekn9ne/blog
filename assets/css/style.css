@@ -727,9 +727,15 @@ img {
   }
 }
 
-/* Basic Comments Styling */
+/* Comments Section */
 .comments {
   margin-top: 4rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-out;
 }
 
 .comments-title {
@@ -741,7 +747,73 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
+#cusdis_thread {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Cusdis specific styles */
+.cusdis-comment {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cusdis-comment-content {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.cusdis-comment-nickname {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cusdis-comment-time {
+  color: var(--text-dim);
+  font-size: 0.9em;
+}
+
+/* Cusdis input styles */
+.cusdis-textarea {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+  color: var(--text) !important;
+  padding: 0.75rem !important;
+  width: 100% !important;
+  transition: border-color 0.3s ease;
+}
+
+.cusdis-textarea:focus {
+  border-color: var(--accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.1) !important;
+}
+
+.cusdis-button {
+  background: var(--accent) !important;
+  color: var(--bg-color) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 0.5rem 1rem !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.cusdis-button:hover {
+  background: rgba(100, 255, 218, 0.8) !important;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.3) !important;
+}
+
+/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
+  .comments {
+    padding: 1rem;
+  }
+  
   .comments-title {
     font-size: 1.25rem;
   }

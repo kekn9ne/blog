@@ -1,33 +1,14 @@
 {%- if page.comments != false -%}
 <div class="comments">
   <h2 class="comments-title">Comments</h2>
-  
-  <div id="remark42"></div>
 
-  <script>
-    var remark_config = {
-      host: 'https://yourblog-comments.duckdns.org',
-      site_id: 'kekn9ne.github.io',
-      components: ['embed'],
-      max_shown_comments: 15,
-      theme: 'dark',
-      page_title: '{{ page.title }}',
-      url: '{{ page.url | absolute_url }}',
-      locale: 'en',
-      show_email_subscription: false,
-      simple_view: false,
-      auth_providers: ['anonymous'],
-      anonymous_user_id: 'anon_' + Math.random().toString(36).substr(2, 8)
-    };
-
-    (function(c) {
-      for(var i = 0; i < c.length; i++){
-        var d = document, s = d.createElement('script');
-        s.src = remark_config.host + '/web/' + c[i] + '.js';
-        s.defer = true;
-        (d.head || d.body).appendChild(s);
-      }
-    })(remark_config.components || ['embed']);
-  </script>
+  <div id="cusdis_thread"
+    data-host="{{ site.cusdis.host }}"
+    data-app-id="{{ site.cusdis.app_id }}"
+    data-page-id="{{ page.url }}"
+    data-page-url="{{ site.url }}{{ page.url }}"
+    data-page-title="{{ page.title }}">
+  </div>
+  <script async defer src="{{ site.cusdis.host }}/js/cusdis.es.js"></script>
 </div>
 {%- endif -%} 
