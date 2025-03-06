@@ -115,9 +115,8 @@ commento:
 
 # Prose.io settings
 prose:
-  rooturl: 'blog/_posts'
-  siteurl: 'https://kekn9ne.github.io/blog'
-  relativeLinks: 'https://kekn9ne.github.io/blog/links.jsonp'
+  rooturl: 'blog'
+  siteurl: 'https://kekn9ne.github.io/blog/'
   media: 'blog/assets/images'
   ignore:
     - index.html
