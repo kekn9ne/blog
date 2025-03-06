@@ -149,9 +149,9 @@ prose:
           placeholder: "YYYY-MM-DD HH:MM:SS"
       - name: "categories"
         field:
-          element: "multiselect"
-          label: "Add Categories"
-          placeholder: "Choose categories"
+          element: "select"
+          label: "Select Category"
+          placeholder: "Choose a category"
           options:
             - name: "Technology"
               value: "technology"
@@ -163,20 +163,22 @@ prose:
               value: "tutorial"
       - name: "tags"
         field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose tags"
-          alterable: true
+          element: "text"
+          label: "Tags"
+          placeholder: "Enter tags (comma separated)"
+          help: "Example: javascript, react, tutorial"
       - name: "image"
         field:
           element: "text"
           label: "Featured Image"
           placeholder: "Add image path (optional)"
+          help: "Example: /assets/images/your-image.jpg"
       - name: "comments"
         field:
           element: "checkbox"
           label: "Enable Comments"
           value: true
+          help: "Check to enable comments on this post"
 
 # Sitemap settings
 defaults:
