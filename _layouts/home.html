@@ -2,9 +2,11 @@
 layout: default
 ---
 <div class="home">
-  {%- if page.title -%}
-    <h1>{{ page.title }}</h1>
-  {%- endif -%}
+  {%- unless page.url == "/" -%}
+    {%- if page.title -%}
+      <h1>{{ page.title }}</h1>
+    {%- endif -%}
+  {%- endunless -%}
 
   {{ content }}
 

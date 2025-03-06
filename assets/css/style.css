@@ -1020,4 +1020,63 @@ img {
     padding: 0.4rem 0.8rem;
     font-size: 0.85rem;
   }
+}
+
+/* Social Links in Header */
+.site-header .social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.site-header .social-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 5px var(--glow);
+}
+
+.site-header .social-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 10px var(--glow),
+    0 0 15px var(--glow),
+    inset 0 0 5px var(--glow);
+}
+
+.site-header .social-link .icon {
+  margin-right: 0.5rem;
+  font-size: 1.1em;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.site-header .social-link:hover .icon {
+  opacity: 1;
+}
+
+/* Mobile Adjustments for Social Links */
+@media (max-width: 768px) {
+  .site-header .social-links {
+    margin-top: 1.5rem;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .site-header .social-link {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
 } 
