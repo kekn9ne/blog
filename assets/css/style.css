@@ -727,15 +727,19 @@ img {
   }
 }
 
-/* Comments Section */
+/* Commento Styles */
 .comments {
   margin-top: 4rem;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border);
+  border: 1px solid var(--accent);
   border-radius: 8px;
   backdrop-filter: blur(10px);
   animation: fadeIn 0.5s ease-out;
+  box-shadow: 
+    0 0 10px var(--glow),
+    0 0 15px var(--glow),
+    inset 0 0 5px var(--glow);
 }
 
 .comments-title {
@@ -747,68 +751,120 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
-/* Cusdis specific styles */
-#cusdis_thread {
-  margin-top: 1rem;
-  width: 100%;
-  color: var(--text);
+/* Commento Elements */
+#commento {
+  color: var(--text) !important;
+  font-family: var(--font-main) !important;
 }
 
-.cusdis-textarea {
+.commento-root {
+  margin-top: 1rem;
+  background: transparent !important;
+}
+
+.commento-root * {
+  font-family: var(--font-main) !important;
+}
+
+.commento-root .commento-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+  margin: 1rem 0 !important;
+  padding: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.commento-root .commento-card:hover {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 10px var(--glow) !important;
+}
+
+.commento-root .commento-body {
+  color: var(--text) !important;
+  line-height: 1.6 !important;
+}
+
+.commento-root .commento-name {
+  color: var(--accent) !important;
+  font-weight: 500 !important;
+}
+
+.commento-root .commento-markdown-help {
+  background: var(--bg-color) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+}
+
+.commento-root .commento-markdown-help td {
+  color: var(--text) !important;
+  padding: 0.5rem !important;
+}
+
+.commento-root textarea {
   background: rgba(255, 255, 255, 0.03) !important;
   border: 1px solid var(--border) !important;
   color: var(--text) !important;
   border-radius: 4px !important;
   padding: 1rem !important;
   transition: all 0.3s ease !important;
+  font-family: var(--font-mono) !important;
 }
 
-.cusdis-textarea:focus {
+.commento-root textarea:focus {
   border-color: var(--accent) !important;
-  box-shadow: 0 0 10px rgba(100, 255, 218, 0.1) !important;
+  box-shadow: 0 0 10px var(--glow) !important;
   outline: none !important;
 }
 
-.cusdis-button {
+.commento-root .commento-submit-button {
   background: var(--accent) !important;
   color: var(--bg-color) !important;
   border: none !important;
-  border-radius: 4px !important;
   padding: 0.5rem 1rem !important;
+  border-radius: 4px !important;
   cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-transform: lowercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+.commento-root .commento-submit-button:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 0 10px var(--glow) !important;
+}
+
+.commento-root a {
+  color: var(--accent) !important;
+  text-decoration: none !important;
   transition: all 0.3s ease !important;
 }
 
-.cusdis-button:hover {
-  opacity: 0.9 !important;
-  transform: translateY(-1px) !important;
+.commento-root a:hover {
+  text-shadow: 0 0 8px var(--glow) !important;
 }
 
-.cusdis-comment {
-  background: rgba(255, 255, 255, 0.02) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 4px !important;
-  padding: 1rem !important;
+.commento-root hr {
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(to right, transparent, var(--accent), transparent) !important;
   margin: 1rem 0 !important;
+  opacity: 0.2 !important;
 }
 
-.cusdis-comment-author {
-  color: var(--accent) !important;
-  font-weight: bold !important;
-}
-
-.cusdis-comment-content {
-  color: var(--text) !important;
-  margin-top: 0.5rem !important;
-}
-
-/* Mobile responsiveness */
+/* Mobile Adjustments */
 @media screen and (max-width: 768px) {
   .comments {
     padding: 1rem;
+    margin: 2rem -1rem;
   }
   
   .comments-title {
     font-size: 1.25rem;
+  }
+
+  .commento-root .commento-card {
+    padding: 0.75rem !important;
   }
 } 

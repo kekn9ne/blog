@@ -18,10 +18,10 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
-</article>
 
-{%- if site.comments and page.comments != false -%}
-  {%- include comments.html -%}
-{%- endif -%}
+  {%- if site.comments and page.comments != false -%}
+    {%- include comments.html -%}
+  {%- endif -%}
+</article>
 
 </div> 

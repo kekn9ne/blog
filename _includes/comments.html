@@ -1,14 +1,16 @@
 {%- if page.comments != false -%}
 <div class="comments">
-  <h2 class="comments-title">Comments</h2>
 
-  <div id="cusdis_thread"
-    data-host="https://yourblog-comments.duckdns.org"
-    data-app-id="{{ site.cusdis.app_id }}"
-    data-page-id="{{ page.url }}"
-    data-page-url="{{ site.url }}{{ page.url }}"
-    data-page-title="{{ page.title }}"
-  ></div>
-  <script async defer src="https://yourblog-comments.duckdns.org/js/cusdis.es.js"></script>
+  <h2 class="comments-title">Comments</h2>
+  <div id="commento"></div>
+  <script defer src="https://yourblog-comments.duckdns.org/js/commento.js"></script>
+  <script>
+    // Configure Commento theme
+    window.commento = {
+      theme: 'dark',
+      hideDeleted: true,
+      autoInit: true
+    }
+  </script>
 </div>
 {%- endif -%} 
