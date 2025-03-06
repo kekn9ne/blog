@@ -125,6 +125,11 @@ prose:
     - /_includes
     - /css
     - /assets
+    - /js
+    - README.md
+    - .gitignore
+    - Gemfile
+    - Gemfile.lock
   metadata:
     _posts:
       - name: "layout"
@@ -135,50 +140,60 @@ prose:
         field:
           element: "text"
           label: "Post Title"
-          placeholder: "Enter your post title"
+          placeholder: "Enter a descriptive title for your post"
+          help: "Choose a clear, engaging title that describes your post content"
       - name: "description"
         field:
           element: "textarea"
           label: "Description"
-          placeholder: "Brief description of your post (under 160 characters)"
+          placeholder: "Brief description of your post (max 160 characters)"
+          help: "Write a compelling meta description to improve SEO"
       - name: "date"
         field:
           element: "text"
-          label: "Date"
+          label: "Publication Date"
           value: CURRENT_DATETIME
-          placeholder: "YYYY-MM-DD HH:MM:SS"
+          help: "Current date and time will be automatically set"
+      - name: "author"
+        field:
+          element: "hidden"
+          value: CURRENT_USER
       - name: "categories"
         field:
           element: "select"
-          label: "Select Category"
-          placeholder: "Choose a category"
+          label: "Category"
+          placeholder: "Choose a primary category"
           options:
-            - name: "Technology"
-              value: "technology"
             - name: "Programming"
               value: "programming"
-            - name: "Personal"
-              value: "personal"
-            - name: "Tutorial"
-              value: "tutorial"
+            - name: "Technology"
+              value: "technology"
+            - name: "Tutorials"
+              value: "tutorials"
+            - name: "Projects"
+              value: "projects"
+            - name: "Development"
+              value: "development"
       - name: "tags"
         field:
           element: "text"
           label: "Tags"
-          placeholder: "Enter tags (comma separated)"
-          help: "Example: javascript, react, tutorial"
+          placeholder: "javascript, react, tutorial"
+          help: "Add relevant tags separated by commas"
+          alterable: true
       - name: "image"
         field:
           element: "text"
           label: "Featured Image"
-          placeholder: "Add image path (optional)"
-          help: "Example: /assets/images/your-image.jpg"
+          placeholder: "/assets/images/your-image.jpg"
+          help: "Add a featured image path (recommended size: 1200x630px)"
       - name: "comments"
         field:
-          element: "checkbox"
-          label: "Enable Comments"
-          value: true
-          help: "Check to enable comments on this post"
+          element: "button"
+          label: "Comments"
+          help: "Toggle comments for this post"
+          on: "true"
+          off: "false"
 
 # Sitemap settings
 defaults:
