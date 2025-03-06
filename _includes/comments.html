@@ -2,27 +2,19 @@
 <div class="comments">
   <h2 class="comments-title">Comments</h2>
   
-  <div id="remark42"></div>
+  <section id="isso-thread" data-isso-id="{{ page.url }}"></section>
 
-  <script>
-    var remark_config = {
-      host: 'http://5.175.136.236',  // Note: using http instead of https
-      site_id: 'kekn9ne.github.io',
-      components: ['embed'],
-      max_shown_comments: 10,
-      theme: 'dark',
-      page_title: '{{ page.title }}',
-      locale: 'en'
-    };
-  
-    (function(c) {
-      for(var i = 0; i < c.length; i++){
-        var d = document, s = d.createElement('script');
-        s.src = remark_config.host + '/web/' + c[i] + '.js';
-        s.defer = true;
-        (d.head || d.body).appendChild(s);
-      }
-    })(remark_config.components || ['embed']);
-  </script>
+  <script data-isso="http://5.175.136.236"
+          data-isso-css="true"
+          data-isso-lang="en"
+          data-isso-max-comments-top="10"
+          data-isso-max-comments-nested="5"
+          data-isso-reveal-on-click="5"
+          data-isso-avatar="true"
+          data-isso-vote="true"
+          data-isso-reply-notifications="true"
+          data-isso-require-author="true"
+          data-isso-vote-levels=""
+          src="http://5.175.136.236/js/embed.min.js"></script>
 </div>
 {%- endif -%} 
