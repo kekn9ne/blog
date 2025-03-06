@@ -757,6 +757,15 @@ img {
   font-family: var(--font-main) !important;
 }
 
+/* Hide "Powered by Commento" text */
+.commento-footer {
+  display: none !important;
+}
+
+.commento-powered-by {
+  display: none !important;
+}
+
 .commento-root {
   margin-top: 1rem;
   background: transparent !important;
