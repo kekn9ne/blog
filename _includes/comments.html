@@ -2,13 +2,27 @@
 <div class="comments">
   <h2 class="comments-title">Comments</h2>
   
-  <div id="cusdis_thread"
-    data-host="{{ site.cusdis.host }}"
-    data-app-id="{{ site.cusdis.app_id }}"
-    data-page-id="{{ page.url }}"
-    data-page-url="{{ site.url }}{{ page.url }}"
-    data-page-title="{{ page.title }}"
-  ></div>
-  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  <div id="remark42"></div>
+
+  <script>
+    var remark_config = {
+      host: 'http://5.175.136.236',  // Note: using http instead of https
+      site_id: 'kekn9ne.github.io',
+      components: ['embed'],
+      max_shown_comments: 10,
+      theme: 'dark',
+      page_title: '{{ page.title }}',
+      locale: 'en'
+    };
+  
+    (function(c) {
+      for(var i = 0; i < c.length; i++){
+        var d = document, s = d.createElement('script');
+        s.src = remark_config.host + '/web/' + c[i] + '.js';
+        s.defer = true;
+        (d.head || d.body).appendChild(s);
+      }
+    })(remark_config.components || ['embed']);
+  </script>
 </div>
 {%- endif -%} 
