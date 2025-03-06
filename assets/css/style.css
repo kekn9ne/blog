@@ -751,66 +751,88 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
-/* Cactus Comments Custom Styling */
-.cactus-comments-container {
+/* Cusdis Custom Styling */
+#cusdis_thread {
   margin-top: 2rem;
+  font-family: var(--font-main);
 }
 
-.cactus-comment {
-  background: rgba(255, 255, 255, 0.02) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 8px !important;
-  margin-bottom: 1rem !important;
-  padding: 1rem !important;
+.cusdis-comment {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
-.cactus-comment-header {
-  font-family: var(--font-mono) !important;
-  color: var(--text-dim) !important;
+.cusdis-comment-author {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-.cactus-comment-content {
-  font-family: var(--font-main) !important;
-  color: var(--text) !important;
-  line-height: 1.8 !important;
+.cusdis-comment-time {
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  margin-left: 1rem;
 }
 
-.cactus-comment-avatar {
-  border-radius: 4px !important;
+.cusdis-comment-content {
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+  letter-spacing: 0.05em;
 }
 
-.cactus-button {
-  background: transparent !important;
-  color: var(--accent) !important;
-  border: 1px solid var(--accent) !important;
-  padding: 0.5rem 1rem !important;
-  font-family: var(--font-mono) !important;
-  font-size: 0.9rem !important;
-  border-radius: 4px !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
+/* Comment Form */
+.cusdis-comment-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
 }
 
-.cactus-button:hover {
-  background: var(--accent) !important;
-  color: var(--bg-color) !important;
-  box-shadow: 0 0 15px var(--glow) !important;
+.cusdis-comment-box input,
+.cusdis-comment-box textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.cactus-editor-textarea {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 4px !important;
-  color: var(--text) !important;
-  font-family: var(--font-main) !important;
-  padding: 1rem !important;
-  transition: all 0.3s ease !important;
+.cusdis-comment-box input:focus,
+.cusdis-comment-box textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--glow);
 }
 
-.cactus-editor-textarea:focus {
-  outline: none !important;
-  border-color: var(--accent) !important;
-  box-shadow: 0 0 10px var(--glow) !important;
+.cusdis-comment-box button {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.8rem 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cusdis-comment-box button:hover {
+  background: var(--accent);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px var(--glow);
 }
 
 @media screen and (max-width: 768px) {
@@ -823,12 +845,11 @@ img {
     font-size: 1.25rem;
   }
 
-  .cactus-comment {
-    padding: 0.8rem !important;
+  .cusdis-comment {
+    padding: 1rem;
   }
-}
 
-/* Dark theme overrides for utterances */
-.utterances-frame {
-  color-scheme: dark;
+  .cusdis-comment-box {
+    padding: 1rem;
+  }
 } 

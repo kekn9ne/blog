@@ -2,19 +2,13 @@
 <div class="comments">
   <h2 class="comments-title">Comments</h2>
   
-  <div class="cactus-comments-container">
-    <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-    <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
-    <div id="comment-section"></div>
-    <script>
-      initComments({
-        node: document.getElementById("comment-section"),
-        defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
-        serverName: "cactus.chat",
-        siteName: "{{ site.github_username }}", 
-        commentSectionId: "{{ page.url | slugify }}"
-      })
-    </script>
-  </div>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="YOUR-APP-ID"
+    data-page-id="{{ page.url }}"
+    data-page-url="{{ site.url }}{{ page.url }}"
+    data-page-title="{{ page.title }}"
+  ></div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 </div>
 {%- endif -%} 
