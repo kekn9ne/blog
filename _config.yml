@@ -115,23 +115,29 @@ commento:
 
 # Prose.io settings
 prose:
-  rooturl: '_posts'
+  rooturl: 'blog/_posts'
   siteurl: 'https://kekn9ne.github.io/blog'
-  media: 'assets/images'
+  relativeLinks: 'https://kekn9ne.github.io/blog/links.jsonp'
+  media: 'blog/assets/images'
   ignore:
+    - index.html
     - index.markdown
     - _config.yml
-    - /_layouts
-    - /_includes
-    - /css
-    - /assets
-    - /js
+    - _layouts
+    - _includes
+    - css
+    - assets
+    - js
     - README.md
     - .gitignore
     - Gemfile
     - Gemfile.lock
+    - feed.xml
+    - sitemap.xml
+    - robots.txt
+    - 404.html
   metadata:
-    _posts:
+    blog/_posts:
       - name: "layout"
         field:
           element: "hidden"
@@ -141,28 +147,20 @@ prose:
           element: "text"
           label: "Post Title"
           placeholder: "Enter a descriptive title for your post"
-          help: "Choose a clear, engaging title that describes your post content"
       - name: "description"
         field:
           element: "textarea"
           label: "Description"
           placeholder: "Brief description of your post (max 160 characters)"
-          help: "Write a compelling meta description to improve SEO"
       - name: "date"
         field:
           element: "text"
-          label: "Publication Date"
+          label: "Date"
           value: CURRENT_DATETIME
-          help: "Current date and time will be automatically set"
-      - name: "author"
-        field:
-          element: "hidden"
-          value: CURRENT_USER
       - name: "categories"
         field:
           element: "select"
           label: "Category"
-          placeholder: "Choose a primary category"
           options:
             - name: "Programming"
               value: "programming"
@@ -172,28 +170,16 @@ prose:
               value: "tutorials"
             - name: "Projects"
               value: "projects"
-            - name: "Development"
-              value: "development"
       - name: "tags"
         field:
           element: "text"
           label: "Tags"
-          placeholder: "javascript, react, tutorial"
-          help: "Add relevant tags separated by commas"
-          alterable: true
-      - name: "image"
+          placeholder: "Enter tags, separated by commas"
+      - name: "published"
         field:
-          element: "text"
-          label: "Featured Image"
-          placeholder: "/assets/images/your-image.jpg"
-          help: "Add a featured image path (recommended size: 1200x630px)"
-      - name: "comments"
-        field:
-          element: "button"
-          label: "Comments"
-          help: "Toggle comments for this post"
-          on: "true"
-          off: "false"
+          element: "checkbox"
+          label: "Published"
+          value: true
 
 # Sitemap settings
 defaults:
