@@ -49,7 +49,7 @@ social:
     - https://twitter.com/jekyllrb
 
 # Logo and Branding
-logo: /assets/images/logo.png
+logo: "https://kekn9ne.github.io/blog/assets/images/logo.png"
 
 # Language Settings
 locale: en_US
@@ -68,11 +68,14 @@ defaults:
       type: "posts"
     values:
       image: 
-        path: /assets/images/default-social.jpg
+        path: "https://kekn9ne.github.io/blog/assets/images/default-social.jpg"
         width: 1200
         height: 1200
       author: kekn9ne
       locale: en_US
+      tags: []  # Empty array as default
+      seo:
+        type: "BlogPosting"
 
 # Build settings
 # theme: minima  # Commented out as we're using our custom theme
