@@ -14,9 +14,10 @@
       page_title: '{{ page.title }}',
       url: '{{ page.url | absolute_url }}',
       locale: 'en',
-      show_email_subscription: true,
+      show_email_subscription: false,
       simple_view: false,
-      auth_providers: ['google', 'github', 'email', 'anonymous']
+      auth_providers: ['anonymous'],
+      anonymous_user_id: 'anon_' + Math.random().toString(36).substr(2, 8)
     };
 
     (function(c) {
