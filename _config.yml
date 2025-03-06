@@ -34,6 +34,7 @@ comments: true  # Enable comments by default on all posts
 # theme: minima  # Commented out as we're using our custom theme
 plugins:
   - jekyll-feed
+  - jekyll-admin
 
 # Exclude from processing.
 # The following items will not be processed, by default.
