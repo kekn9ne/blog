@@ -747,50 +747,26 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
+/* Cusdis specific styles */
 #cusdis_thread {
   margin-top: 1rem;
   width: 100%;
-}
-
-/* Cusdis specific styles */
-.cusdis-comment {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.cusdis-comment-content {
   color: var(--text);
-  line-height: 1.6;
 }
 
-.cusdis-comment-nickname {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.cusdis-comment-time {
-  color: var(--text-dim);
-  font-size: 0.9em;
-}
-
-/* Cusdis input styles */
 .cusdis-textarea {
   background: rgba(255, 255, 255, 0.03) !important;
   border: 1px solid var(--border) !important;
-  border-radius: 4px !important;
   color: var(--text) !important;
-  padding: 0.75rem !important;
-  width: 100% !important;
-  transition: border-color 0.3s ease;
+  border-radius: 4px !important;
+  padding: 1rem !important;
+  transition: all 0.3s ease !important;
 }
 
 .cusdis-textarea:focus {
   border-color: var(--accent) !important;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.1) !important;
   outline: none !important;
-  box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.1) !important;
 }
 
 .cusdis-button {
@@ -804,8 +780,26 @@ img {
 }
 
 .cusdis-button:hover {
-  background: rgba(100, 255, 218, 0.8) !important;
-  box-shadow: 0 0 10px rgba(100, 255, 218, 0.3) !important;
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+}
+
+.cusdis-comment {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 4px !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+}
+
+.cusdis-comment-author {
+  color: var(--accent) !important;
+  font-weight: bold !important;
+}
+
+.cusdis-comment-content {
+  color: var(--text) !important;
+  margin-top: 0.5rem !important;
 }
 
 /* Mobile responsiveness */
