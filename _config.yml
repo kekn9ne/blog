@@ -118,6 +118,13 @@ prose:
   rooturl: '_posts'
   siteurl: 'https://kekn9ne.github.io/blog'
   media: 'assets/images'
+  ignore:
+    - index.markdown
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /assets
   metadata:
     _posts:
       - name: "layout"
@@ -127,17 +134,23 @@ prose:
       - name: "title"
         field:
           element: "text"
-          label: "Post title"
+          label: "Post Title"
           placeholder: "Enter your post title"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Description"
+          placeholder: "Brief description of your post (under 160 characters)"
       - name: "date"
         field:
           element: "text"
           label: "Date"
           value: CURRENT_DATETIME
+          placeholder: "YYYY-MM-DD HH:MM:SS"
       - name: "categories"
         field:
           element: "multiselect"
-          label: "Add categories"
+          label: "Add Categories"
           placeholder: "Choose categories"
           options:
             - name: "Technology"
@@ -146,10 +159,23 @@ prose:
               value: "programming"
             - name: "Personal"
               value: "personal"
+            - name: "Tutorial"
+              value: "tutorial"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose tags"
+          alterable: true
+      - name: "image"
+        field:
+          element: "text"
+          label: "Featured Image"
+          placeholder: "Add image path (optional)"
       - name: "comments"
         field:
           element: "checkbox"
-          label: "Allow comments"
+          label: "Enable Comments"
           value: true
 
 # Sitemap settings
