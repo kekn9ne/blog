@@ -2,20 +2,30 @@
 <div class="comments">
   <h2 class="comments-title">Comments</h2>
   
-  <section id="isso-thread" data-isso-id="{{ page.url | relative_url }}"></section>
+  <div id="remark42"></div>
 
-  <script data-isso="https://yourblog-comments.duckdns.org"
-          data-isso-css="true"
-          data-isso-lang="en"
-          data-isso-max-comments-top="10"
-          data-isso-max-comments-nested="5"
-          data-isso-reveal-on-click="5"
-          data-isso-avatar="true"
-          data-isso-vote="true"
-          data-isso-reply-notifications="true"
-          data-isso-require-author="true"
-          data-isso-vote-levels=""
-          data-isso-host="https://kekn9ne.github.io/blog"
-          src="https://yourblog-comments.duckdns.org/js/embed.min.js"></script>
+  <script>
+    var remark_config = {
+      host: 'https://yourblog-comments.duckdns.org',
+      site_id: 'kekn9ne.github.io',
+      components: ['embed'],
+      max_shown_comments: 15,
+      theme: 'dark',
+      page_title: '{{ page.title }}',
+      url: '{{ page.url | absolute_url }}',
+      locale: 'en',
+      show_email_subscription: false,
+      simple_view: false
+    };
+
+    (function(c) {
+      for(var i = 0; i < c.length; i++){
+        var d = document, s = d.createElement('script');
+        s.src = remark_config.host + '/web/' + c[i] + '.js';
+        s.defer = true;
+        (d.head || d.body).appendChild(s);
+      }
+    })(remark_config.components || ['embed']);
+  </script>
 </div>
 {%- endif -%} 

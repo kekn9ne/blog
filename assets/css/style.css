@@ -727,7 +727,7 @@ img {
   }
 }
 
-/* Remark42 Custom Styling */
+/* Basic Comments Styling */
 .comments {
   margin-top: 4rem;
 }
@@ -741,145 +741,8 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
-#remark42 {
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  font-family: var(--font-main);
-}
-
-/* Remark42 theme overrides */
-:root {
-  --color-bg: var(--bg-color);
-  --color-text: var(--text-color);
-  --color-secondary: var(--accent);
-  --color-link: var(--accent);
-  --color-border: var(--border);
-  --font-main: var(--font-main);
-  --font-code: var(--font-mono);
-}
-
-/* Animation for comments loading */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.comment {
-  animation: fadeIn 0.3s ease-out forwards;
-}
-
-/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-  #remark42 {
-    padding: 1rem;
-  }
-  
   .comments-title {
     font-size: 1.25rem;
-  }
-}
-
-/* Isso Comments Styling */
-#isso-thread {
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-}
-
-.isso-comment {
-  margin: 1rem 0;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 4px;
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
-}
-
-.isso-comment:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 15px var(--glow);
-}
-
-.isso-comment-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.isso-comment-author {
-  font-family: var(--font-title);
-  color: var(--accent);
-  margin-right: 1rem;
-}
-
-.isso-comment-date {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  opacity: 0.7;
-}
-
-.isso-comment-text {
-  font-family: var(--font-main);
-  line-height: 1.6;
-  color: var(--text);
-}
-
-.isso-postbox {
-  margin-top: 2rem;
-}
-
-.isso-input-wrapper {
-  margin-bottom: 1rem;
-}
-
-.isso-input-wrapper input,
-.isso-textarea {
-  width: 100%;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text);
-  font-family: var(--font-main);
-  transition: all 0.3s ease;
-}
-
-.isso-input-wrapper input:focus,
-.isso-textarea:focus {
-  border-color: var(--accent);
-  outline: none;
-  box-shadow: 0 0 10px var(--glow);
-}
-
-.isso-submit {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-family: var(--font-title);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.isso-submit:hover {
-  background: var(--accent);
-  color: var(--bg-color);
-  box-shadow: 0 0 15px var(--glow);
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-  #isso-thread {
-    padding: 1rem;
-  }
-  
-  .isso-comment {
-    padding: 0.75rem;
   }
 } 
