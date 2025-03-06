@@ -17,6 +17,32 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+# Prose.io settings
+prose:
+  rooturl: ''
+  siteurl: 'https://kekn9ne.github.io/blog'
+  media: 'assets/images'
+  ignore:
+    - index.md
+    - index.markdown
+    - _config.yml
+    - _layouts
+    - _includes
+    - assets
+    - .gitignore
+    - _config.yml
+    - 404.html
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          placeholder: "Post title"
 
 title: "Kekn9ne's Personal Blog"
 email: kekn9ne@yandex.com
@@ -113,32 +139,7 @@ cusdis:
 commento:
   url: "https://yourblog-comments.duckdns.org"
 
-# Prose.io settings
-prose:
-  rooturl: ''
-  siteurl: 'https://kekn9ne.github.io/blog'
-  media: 'assets/images'
-  ignore:
-    - index.md
-    - index.markdown
-    - _config.yml
-    - _layouts
-    - _includes
-    - assets
-    - .gitignore
-    - _config.yml
-    - 404.html
-  metadata:
-    _posts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          placeholder: "Post title"
+
       
 
 # Sitemap settings
