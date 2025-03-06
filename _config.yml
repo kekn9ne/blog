@@ -83,6 +83,7 @@ plugins:
   - jekyll-feed
   - jekyll-admin
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -149,3 +150,19 @@ prose:
           element: "checkbox"
           label: "Allow comments"
           value: true
+
+# Sitemap settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: true
+      lastmod: site.time
+
+# URL handling
+url: "https://kekn9ne.github.io"
+baseurl: "/blog"
+permalink: /:year/:month/:day/:title/
+
+# Force www/non-www (uncomment one)
+enforce_ssl: kekn9ne.github.io   # Forces HTTPS and canonical URL

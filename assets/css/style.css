@@ -876,4 +876,100 @@ img {
   .commento-root .commento-card {
     padding: 0.75rem !important;
   }
+}
+
+/* Media Queries */
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .post-link {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 540px;
+    padding: 0 1rem;
+  }
+
+  .site-header {
+    padding: 2rem 0;
+  }
+
+  .post {
+    padding: 1.5rem;
+    margin: 0 -1rem;
+  }
+
+  .post-header h1 {
+    font-size: 2rem;
+  }
+
+  .post-content pre {
+    margin: 1.5rem -1rem;
+    padding: 1rem;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  .site-nav a {
+    margin-right: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .post-item {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .post-link {
+    font-size: 1.4rem;
+  }
+
+  .post-content {
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0f0f0f;
+    --text: #e0e0e0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .site-header,
+  .site-footer,
+  .comments {
+    display: none;
+  }
+
+  .post {
+    border: none;
+    box-shadow: none;
+  }
 } 

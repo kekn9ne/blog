@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://kekn9ne.github.io/blog/sitemap.xml
+
+# Block specific paths
+Disallow: /assets/
+Disallow: /admin/
+Disallow: /feed.xml 
