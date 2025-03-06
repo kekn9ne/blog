@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Basic SEO -->
-  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
-  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }} | Personal Blog</title>
+  <meta name="description" content="Welcome to {{ site.title }} - {{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="author" content="{{ page.author | default: site.author.name }}">
   {% if page.tags %}
-  <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+  <meta name="keywords" content="personal blog, tech blog, github projects, twitter updates, {{ page.tags | join: ', ' }}">
   {% endif %}
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}{{ site.baseurl }}/sitemap.xml">
@@ -128,6 +128,12 @@
   </header>
 
   <main class="container">
+    {% if page.url == '/' %}
+    <div class="welcome-section">
+      <h1 class="welcome-heading">Welcome to My Personal Tech Blog</h1>
+      <h2 class="welcome-subheading">Follow my journey on GitHub and Twitter</h2>
+    </div>
+    {% endif %}
     {{ content }}
   </main>
 
