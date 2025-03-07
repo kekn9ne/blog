@@ -365,54 +365,81 @@ body {
   margin: 0 0.2em;
 }
 
-.post-content pre {
-  margin: 2rem -2rem;
-  padding: 2rem;
-  background: var(--code-bg);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  overflow-x: auto;
-  position: relative;
+.post-content pre,
+.page-content pre {
+  background: var(--bg-color) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 4px !important;
+  padding: 2rem !important;
+  margin: 2rem 0 !important;
+  position: relative !important;
   box-shadow: 
-    0 0 10px rgba(0, 0, 0, 0.3),
-    inset 0 0 2px var(--glow);
+    0 0 10px var(--glow),
+    0 0 15px var(--glow),
+    inset 0 0 5px var(--glow) !important;
+  overflow-x: auto !important;
 }
 
-.post-content pre code {
-  background: none;
-  color: var(--text);
-  padding: 0;
-  font-size: 0.95em;
-  line-height: 1.7;
-  display: block;
-  white-space: pre;
-  overflow-x: auto;
+.post-content pre code,
+.page-content pre code {
+  background: none !important;
+  color: var(--text) !important;
+  padding: 0 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.95em !important;
+  line-height: 1.7 !important;
+  display: block !important;
+  white-space: pre !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3) !important;
 }
 
 /* Syntax Highlighting */
-.post-content .keyword { color: var(--code-keyword); }
-.post-content .function { color: var(--code-function); }
-.post-content .string { color: var(--code-string); }
-.post-content .number { color: var(--code-number); }
-.post-content .comment { color: var(--code-comment); font-style: italic; }
-.post-content .operator { color: var(--code-operator); }
-.post-content .property { color: var(--code-property); }
+.post-content pre .keyword,
+.page-content pre .keyword,
+.post-content pre .def,
+.page-content pre .def { 
+  color: var(--code-keyword) !important;
+  font-style: italic !important;
+}
 
-/* Code Block Title */
-.post-content pre::before {
-  content: attr(data-language);
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8em;
-  font-family: var(--font-mono);
-  color: var(--text-dim);
-  background: var(--code-bg);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  opacity: 0.8;
+.post-content pre .class,
+.page-content pre .class { 
+  color: var(--code-function) !important;
+  font-weight: bold !important;
+}
+
+.post-content pre .string,
+.page-content pre .string { 
+  color: var(--code-string) !important;
+}
+
+.post-content pre .self,
+.page-content pre .self { 
+  color: var(--code-operator) !important;
+  font-style: italic !important;
+}
+
+.post-content pre .comment,
+.page-content pre .comment { 
+  color: var(--code-comment) !important;
+  font-style: italic !important;
+}
+
+/* Code Block Title/Header */
+.post-content pre::before,
+.page-content pre::before {
+  content: '< what i do />' !important;
+  position: absolute !important;
+  top: -1.5em !important;
+  left: 0 !important;
+  padding: 0.3rem 1rem !important;
+  font-size: 0.9em !important;
+  font-family: var(--font-mono) !important;
+  color: var(--accent) !important;
+  background: var(--bg-color) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 10px var(--glow) !important;
 }
 
 .post-content h2, 
