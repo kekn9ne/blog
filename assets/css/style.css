@@ -857,33 +857,68 @@ img {
 }
 
 /* Syntax Highlighting for About Page */
-.page-content .language-python .keyword,
-.page-content .language-python .def { 
+.language-python .k,
+.language-python .kd { 
   color: var(--code-keyword) !important;
   font-style: italic !important;
 }
 
-.page-content .language-python .class { 
+.language-python .nc { 
   color: var(--code-function) !important;
   font-weight: bold !important;
 }
 
-.page-content .language-python .string { 
+.language-python .s,
+.language-python .s1,
+.language-python .s2 { 
   color: var(--code-string) !important;
 }
 
-.page-content .language-python .self { 
+.language-python .bp { 
   color: var(--code-operator) !important;
   font-style: italic !important;
 }
 
-.page-content .language-python .comment { 
-  color: var(--code-comment) !important;
-  font-style: italic !important;
+.language-python .nf { 
+  color: var(--code-function) !important;
 }
 
-/* Code Block Title for About Page */
-.page-content pre::before {
+.language-python .o,
+.language-python .p { 
+  color: var(--code-operator) !important;
+}
+
+.language-python .n { 
+  color: var(--code-variable) !important;
+}
+
+/* Code block base styles */
+.highlighter-rouge {
+  margin: 2rem 0 !important;
+}
+
+.highlight {
+  background: var(--bg-color) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 4px !important;
+  padding: 2rem !important;
+  position: relative !important;
+  overflow-x: auto !important;
+}
+
+.highlight pre {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.highlight code {
+  font-family: var(--font-mono) !important;
+  font-size: 0.95em !important;
+  line-height: 1.7 !important;
+}
+
+/* Code Block Title */
+.highlight::before {
   content: '< code />' !important;
   position: absolute !important;
   top: -1.5em !important;
