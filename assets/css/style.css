@@ -1156,7 +1156,14 @@ img {
   padding: 1rem !important;
   transition: all 0.3s ease !important;
   width: 100% !important;
+  min-height: 100px !important;
+  resize: vertical !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
 
+.commento-root textarea:empty {
+  overflow: hidden !important;
 }
 
 .commento-root textarea:focus {
