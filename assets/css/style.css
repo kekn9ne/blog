@@ -33,6 +33,7 @@
 * {
   text-transform: lowercase;
   letter-spacing: 0.15em;
+  box-sizing: border-box;
 }
 
 ::selection {
@@ -54,6 +55,8 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 300;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Layout */
@@ -578,37 +581,67 @@ img {
   height: 2rem;
 }
 
-/* Responsive Design */
+/* Mobile Responsive Adjustments */
 @media screen and (max-width: 768px) {
-  html {
-    font-size: 15px;
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   .container {
-    padding: 0 1.5rem;
+    width: 100%;
+    max-width: 100vw;
+    padding: 0.5rem;
+    margin: 0;
+    overflow-x: hidden;
   }
 
-  .post-link {
-    font-size: 1.8rem;
-  }
-
-  .post-item::before {
-    left: -1.5rem;
+  .post-item {
+    width: 100%;
+    margin: 0.75rem 0;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-width: 1px;
   }
 
   .post {
-    padding: 2rem;
-    margin: 0 -1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0.75rem;
+    box-sizing: border-box;
+  }
+
+  .post-content {
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .post-content pre {
+    width: calc(100% + 1rem);
+    margin: 0.75rem -0.5rem;
+    padding: 0.75rem;
+    overflow-x: auto;
+  }
+
+  .social-links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+    justify-content: center;
+  }
+
+  .post-link {
+    font-size: 1.4rem;
+    line-height: 1.3;
   }
 
   .post-header h1 {
-    font-size: 2rem;
-  }
-
-  .post-content pre,
-  .highlight,
-  .highlighter-rouge {
-    margin: 2rem -2rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
   }
 
   .post-content h2::before,
@@ -634,321 +667,70 @@ img {
   }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--text-dim);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
-}
-
-/* Syntax Highlighting */
-.highlight,
-.highlighter-rouge {
-  background: var(--code-bg);
-  border-radius: 4px;
-
-  position: relative;
-  box-shadow: 
-    0 0 10px rgba(0, 0, 0, 0.3),
-    inset 0 0 2px var(--glow);
-}
-
-.highlight pre,
-.highlighter-rouge pre {
-  margin: 0;
-  padding: 2rem;
-  background: transparent;
-  overflow-x: auto;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-.highlight code,
-.highlighter-rouge code {
-  background: none;
-  padding: 0;
-  font-size: 0.95em;
-  line-height: 1.7;
-  letter-spacing: 0.05em;
-}
-
-/* Rouge/Pygments Syntax Colors */
-.highlight .c, .highlight .c1, .highlight .cm { color: var(--code-comment); font-style: italic; } /* Comment */
-.highlight .k, .highlight .kd, .highlight .kn { color: var(--code-keyword); } /* Keyword */
-.highlight .mi, .highlight .mf { color: var(--code-number); } /* Number */
-.highlight .s, .highlight .s1, .highlight .s2 { color: var(--code-string); } /* String */
-.highlight .na, .highlight .nb { color: var(--code-property); } /* Name.Attribute */
-.highlight .nf { color: var(--code-function); } /* Name.Function */
-.highlight .o { color: var(--code-operator); } /* Operator */
-.highlight .p { color: var(--text); } /* Punctuation */
-.highlight .nx { color: var(--code-variable); } /* Name.Other */
-.highlight .nt { color: var(--code-keyword); } /* Name.Tag */
-.highlight .nl { color: var(--code-property); } /* Name.Label */
-
-/* Language Badge */
-.highlight::before {
-  content: attr(data-lang);
-  position: absolute;
-  top: 0;
-  right: 1rem;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8em;
-  font-family: var(--font-mono);
-  color: var(--text-dim);
-  background: var(--code-bg);
-  border: 1px solid var(--border);
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  opacity: 0.8;
-}
-
-/* Mobile Adjustments */
-@media screen and (max-width: 768px) {
-  .highlight,
-  .highlighter-rouge {
-    margin: 2rem -1.5rem;
-  }
-  
-  .highlight pre,
-  .highlighter-rouge pre {
-    padding: 1.5rem;
-  }
-}
-
-/* Commento Styles */
-.comments {
-  margin-top: 4rem;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--accent);
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
-  animation: fadeIn 0.5s ease-out;
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow),
-    inset 0 0 5px var(--glow);
-}
-
-.comments-title {
-  font-family: var(--font-title);
-  font-size: 1.5rem;
-  color: var(--accent);
-  margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-/* Commento Elements */
-#commento {
-  color: var(--text) !important;
-  font-family: var(--font-main) !important;
-}
-
-/* Hide "Powered by Commento" text */
-.commento-footer {
-  display: none !important;
-}
-
-.commento-powered-by {
-  display: none !important;
-}
-
-.commento-root {
-  margin-top: 1rem;
-  background: transparent !important;
-}
-
-.commento-root * {
-  font-family: var(--font-main) !important;
-}
-
-.commento-root .commento-card {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 4px !important;
-  margin: 1rem 0 !important;
-  padding: 1rem !important;
-  transition: all 0.3s ease !important;
-}
-
-.commento-root .commento-card:hover {
-  border-color: var(--accent) !important;
-  box-shadow: 0 0 10px var(--glow) !important;
-}
-
-.commento-root .commento-body {
-  color: var(--text) !important;
-  line-height: 1.6 !important;
-}
-
-.commento-root .commento-name {
-  color: var(--accent) !important;
-  font-weight: 500 !important;
-}
-
-.commento-root .commento-markdown-help {
-  background: var(--bg-color) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 4px !important;
-}
-
-.commento-root .commento-markdown-help td {
-  color: var(--text) !important;
-  padding: 0.5rem !important;
-}
-
-.commento-root textarea {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid var(--border) !important;
-  color: var(--text) !important;
-  border-radius: 4px !important;
-  padding: 1rem !important;
-  transition: all 0.3s ease !important;
-  font-family: var(--font-mono) !important;
-}
-
-.commento-root textarea:focus {
-  border-color: var(--accent) !important;
-  box-shadow: 0 0 10px var(--glow) !important;
-  outline: none !important;
-}
-
-.commento-root .commento-submit-button {
-  background: var(--accent) !important;
-  color: var(--bg-color) !important;
-  border: none !important;
-  padding: 0.5rem 1rem !important;
-  border-radius: 4px !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  text-transform: lowercase !important;
-  letter-spacing: 0.1em !important;
-}
-
-.commento-root .commento-submit-button:hover {
-  opacity: 0.9 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 0 10px var(--glow) !important;
-}
-
-.commento-root a {
-  color: var(--accent) !important;
-  text-decoration: none !important;
-  transition: all 0.3s ease !important;
-}
-
-.commento-root a:hover {
-  text-shadow: 0 0 8px var(--glow) !important;
-}
-
-.commento-root hr {
-  border: none !important;
-  height: 1px !important;
-  background: linear-gradient(to right, transparent, var(--accent), transparent) !important;
-  margin: 1rem 0 !important;
-  opacity: 0.2 !important;
-}
-
-/* Mobile Adjustments */
-@media screen and (max-width: 768px) {
-  .comments {
-    padding: 1rem;
-    margin: 2rem -1rem;
-  }
-  
-  .comments-title {
-    font-size: 1.25rem;
-  }
-
-  .commento-root .commento-card {
-    padding: 0.75rem !important;
-  }
-}
-
-/* Media Queries */
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
   .container {
-    max-width: 960px;
-  }
-}
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-  .container {
-    max-width: 720px;
-  }
-  
-  .post-link {
-    font-size: 1.6rem;
-  }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {
-  html {
-    font-size: 14px;
-  }
-
-  .container {
-    max-width: 540px;
-    padding: 0 1rem;
-  }
-
-  .site-header {
-    padding: 2rem 0;
-  }
-
-  .post {
-    padding: 1.5rem;
-    margin: 0 -1rem;
-  }
-
-  .post-header h1 {
-    font-size: 2rem;
-  }
-
-  .post-content pre {
-    margin: 1.5rem -1rem;
-    padding: 1rem;
-  }
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  .container {
-    padding: 0 0.8rem;
-  }
-
-  .site-nav a {
-    margin-right: 1rem;
-    font-size: 0.75rem;
+    padding: 0.3rem;
   }
 
   .post-item {
-    padding: 1.5rem;
-    margin-bottom: 3rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .post-content pre {
+    width: calc(100% + 0.6rem);
+    margin: 0.5rem -0.3rem;
+    padding: 0.5rem;
   }
 
   .post-link {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    word-break: break-word;
   }
 
-  .post-content {
+  .welcome-heading {
+    font-size: 1.8rem;
+    word-break: break-word;
+  }
+
+  .welcome-subheading {
     font-size: 1rem;
+  }
+
+  .home .post-content p a,
+  .home > p a {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    display: inline-flex;
+    width: auto;
+  }
+
+  .post-meta {
+    font-size: 0.8em;
+    margin: 0.5rem 0;
+  }
+
+  .post-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+
+  .post-content h2 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .social-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75em;
+  }
+
+  .site-nav a {
+    font-size: 0.7rem;
+    margin-right: 0.75rem;
   }
 }
 
