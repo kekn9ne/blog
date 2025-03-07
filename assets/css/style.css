@@ -866,7 +866,7 @@ img {
   right: 0;
   height: 2px;
   background: linear-gradient(to right, transparent, var(--accent), transparent);
-  animation: scanline 2s linear infinite;
+
 }
 
 .terminal-effect .prompt {
@@ -878,14 +878,7 @@ img {
   animation: blink 1s step-end infinite;
 }
 
-@keyframes scanline {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
-}
+
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
