@@ -836,15 +836,65 @@ img {
 }
 
 .page-content pre {
-  background: var(--card);
-  border: 1px solid var(--accent);
-  border-radius: 4px;
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow),
-    inset 0 0 5px var(--glow);
+  background: var(--bg-color) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 4px !important;
+  padding: 2rem !important;
+  margin: 2rem 0 !important;
+  position: relative !important;
+  overflow-x: auto !important;
+}
+
+.page-content pre code {
+  background: none !important;
+  color: var(--text) !important;
+  padding: 0 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.95em !important;
+  line-height: 1.7 !important;
+  display: block !important;
+  white-space: pre !important;
+}
+
+/* Syntax Highlighting for About Page */
+.page-content .language-python .keyword,
+.page-content .language-python .def { 
+  color: var(--code-keyword) !important;
+  font-style: italic !important;
+}
+
+.page-content .language-python .class { 
+  color: var(--code-function) !important;
+  font-weight: bold !important;
+}
+
+.page-content .language-python .string { 
+  color: var(--code-string) !important;
+}
+
+.page-content .language-python .self { 
+  color: var(--code-operator) !important;
+  font-style: italic !important;
+}
+
+.page-content .language-python .comment { 
+  color: var(--code-comment) !important;
+  font-style: italic !important;
+}
+
+/* Code Block Title for About Page */
+.page-content pre::before {
+  content: '< code />' !important;
+  position: absolute !important;
+  top: -1.5em !important;
+  left: 0 !important;
+  padding: 0.3rem 1rem !important;
+  font-size: 0.9em !important;
+  font-family: var(--font-mono) !important;
+  color: var(--accent) !important;
+  background: var(--bg-color) !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 4px !important;
 }
 
 .terminal-effect {
@@ -877,8 +927,6 @@ img {
 .terminal-effect .cursor {
   animation: blink 1s step-end infinite;
 }
-
-
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
