@@ -1,6 +1,16 @@
 prose:
-  rooturl: '_posts'
+  rooturl: ''
   siteurl: 'https://kekn9ne.github.io/blog'
+  media: 'assets/images'
+  ignore:
+    - index.md
+    - index.markdown
+    - _config.yml
+    - _layouts
+    - _includes
+    - assets
+    - .gitignore
+    - 404.html
   metadata:
     _posts:
       - name: "layout"
@@ -11,8 +21,63 @@ prose:
         field:
           element: "text"
           label: "Title"
+          placeholder: "Enter your post title"
+          help: "Choose a clear, engaging title that describes your post content"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Description"
+          placeholder: "Brief description of your post (max 160 characters)"
+          help: "Write a compelling meta description to improve SEO"
       - name: "date"
         field:
           element: "text"
-          label: "Date"
-          value: CURRENT_DATETIME 
+          label: "Publication Date"
+          value: CURRENT_DATETIME
+          help: "Current date and time will be automatically set"
+      - name: "author"
+        field:
+          element: "hidden"
+          value: "kekn9ne"
+      - name: "categories"
+        field:
+          element: "select"
+          label: "Category"
+          placeholder: "Choose a primary category"
+          options:
+            - name: "Programming"
+              value: "programming"
+            - name: "Technology"
+              value: "technology"
+            - name: "Tutorials"
+              value: "tutorials"
+            - name: "Projects"
+              value: "projects"
+            - name: "Development"
+              value: "development"
+      - name: "tags"
+        field:
+          element: "text"
+          label: "Tags"
+          placeholder: "javascript, react, tutorial"
+          help: "Add relevant tags separated by commas"
+          alterable: true
+      - name: "image"
+        field:
+          element: "text"
+          label: "Featured Image"
+          placeholder: "/assets/images/your-image.jpg"
+          help: "Add a featured image path (recommended size: 1200x630px)"
+      - name: "comments"
+        field:
+          element: "button"
+          label: "Comments"
+          help: "Toggle comments for this post"
+          on: "true"
+          off: "false"
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          value: true
+          help: "Uncheck to save as draft" 
