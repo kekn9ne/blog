@@ -126,10 +126,9 @@ prose:
     - _includes
     - assets
     - .gitignore
-    - _config.yml
     - 404.html
   metadata:
-    _posts:
+    "":
       - name: "layout"
         field:
           element: "hidden"
