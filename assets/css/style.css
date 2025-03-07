@@ -1232,4 +1232,96 @@ img {
 .home .post-content p a:hover::before,
 .home > p a:hover::before {
   transform: translateX(3px);
+}
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .post-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .social-link {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+
+  /* Header adjustments */
+  header {
+    padding: 10px;
+  }
+
+  /* Content width adjustments */
+  .post-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 1.8em;
+    margin: 15px 0;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin: 12px 0;
+  }
+
+  /* Code blocks and pre adjustments */
+  pre {
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Image adjustments */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 98%;
+    padding: 8px;
+  }
+
+  .post-card {
+    padding: 12px;
+    margin: 8px 0;
+  }
+
+  .social-link {
+    padding: 5px 10px;
+    font-size: 0.85em;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .post-meta {
+    font-size: 0.9em;
+  }
 } 
