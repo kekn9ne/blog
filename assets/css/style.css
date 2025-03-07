@@ -893,8 +893,8 @@ img {
 }
 
 /* Code block base styles */
-.highlighter-rouge {
-  margin: 2rem 0 !important;
+.language-python.highlighter-rouge {
+  margin: 2rem 0;
 }
 
 .highlight {
@@ -906,15 +906,54 @@ img {
   overflow-x: auto !important;
 }
 
-.highlight pre {
+.highlight pre.highlight {
   margin: 0 !important;
   padding: 0 !important;
+  background: none !important;
+  border: none !important;
 }
 
 .highlight code {
   font-family: var(--font-mono) !important;
   font-size: 0.95em !important;
   line-height: 1.7 !important;
+  color: var(--text) !important;
+}
+
+/* Rouge Syntax Highlighting */
+.highlight .k { /* keyword */
+  color: var(--code-keyword) !important;
+  font-style: italic !important;
+}
+
+.highlight .nc { /* class name */
+  color: var(--code-function) !important;
+  font-weight: bold !important;
+}
+
+.highlight .nf { /* function name */
+  color: var(--code-function) !important;
+}
+
+.highlight .s { /* string */
+  color: var(--code-string) !important;
+}
+
+.highlight .bp { /* self */
+  color: var(--code-operator) !important;
+  font-style: italic !important;
+}
+
+.highlight .o { /* operator */
+  color: var(--code-operator) !important;
+}
+
+.highlight .p { /* punctuation */
+  color: var(--code-operator) !important;
+}
+
+.highlight .n { /* variable */
+  color: var(--code-variable) !important;
 }
 
 /* Code Block Title */
