@@ -1156,7 +1156,7 @@ img {
   padding: 1rem !important;
   transition: all 0.3s ease !important;
   width: 100% !important;
-  resize: vertical !important;
+
 }
 
 .commento-root textarea:focus {
