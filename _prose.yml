@@ -1,0 +1,18 @@
+prose:
+  rooturl: '_posts'
+  siteurl: 'https://kekn9ne.github.io/blog'
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          value: CURRENT_DATETIME 
