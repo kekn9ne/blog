@@ -6,16 +6,16 @@
   --bg-color: #0f0f0f;
   --text: #e0e0e0;
   --text-dim: #808080;
-  --accent: #64ffda;
+  --accent: #00ffd5;
   --border: rgba(255, 255, 255, 0.05);
   --card: rgba(255, 255, 255, 0.02);
-  --glow: rgba(100, 255, 218, 0.1);
-  --glow-strong: rgba(100, 255, 218, 0.2);
+  --glow: rgba(0, 255, 213, 0.15);
+  --glow-strong: rgba(0, 255, 213, 0.25);
   
   /* Code Colors */
   --code-bg: #1a1a1a;
   --code-keyword: #ff7edb;
-  --code-function: #64ffda;
+  --code-function: #00ffd5;
   --code-string: #ffb86c;
   --code-number: #bd93f9;
   --code-comment: #6272a4;
