@@ -1110,10 +1110,7 @@ img {
   
   background: var(--card);
   
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow),
-    inset 0 0 5px var(--glow);
+  
 }
 
 /* Comment Cards */
