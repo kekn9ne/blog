@@ -1299,4 +1299,51 @@ img {
   .commento-root .commento-body {
     font-size: 0.9rem !important;
   }
+}
+
+/* About Page Links */
+.page-content a {
+  color: var(--accent);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.1em 0.2em;
+  margin: 0 -0.2em;
+  border-radius: 3px;
+}
+
+.page-content a:hover {
+  color: var(--text);
+  background: var(--accent);
+}
+
+.page-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-content ul li {
+  margin: 0.5rem 0;
+}
+
+.page-content ul li a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  background: var(--card);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.page-content ul li a:hover {
+  transform: translateY(-2px);
+  color: var(--accent);
+  background: var(--bg-color);
+  border-color: var(--accent);
 } 
