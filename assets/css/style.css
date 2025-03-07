@@ -1114,7 +1114,7 @@ img {
 
 /* Comment Cards */
 .commento-root .commento-card {
-  background: rgba(255, 255, 255, 0.02) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid var(--border) !important;
   border-radius: 4px !important;
   padding: 1rem !important;
@@ -1133,10 +1133,11 @@ img {
 
 /* Comment Text */
 .commento-root .commento-body {
-  color: var(--text) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   font-family: var(--font-main) !important;
   line-height: 1.6 !important;
   letter-spacing: 0.05em !important;
+  font-weight: 400 !important;
 }
 
 /* Comment Author */
@@ -1144,14 +1145,16 @@ img {
   color: var(--accent) !important;
   font-family: var(--font-mono) !important;
   font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  opacity: 0.95 !important;
 }
 
 /* Comment Input */
 .commento-root textarea {
-  background: var(--card) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid var(--border) !important;
   border-radius: 4px !important;
-  color: var(--text) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   font-family: var(--font-mono) !important;
   padding: 1rem !important;
   transition: all 0.3s ease !important;
@@ -1160,6 +1163,7 @@ img {
   resize: vertical !important;
   overflow-y: auto !important;
   overflow-x: hidden !important;
+  font-weight: 400 !important;
 }
 
 .commento-root textarea:empty {
