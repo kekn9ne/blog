@@ -6,22 +6,20 @@
   --bg-color: #0f0f0f;
   --text: #e0e0e0;
   --text-dim: #808080;
-  --accent: #00ffd5;
+  --accent: #2a5a4b;
   --border: rgba(255, 255, 255, 0.05);
   --card: rgba(255, 255, 255, 0.02);
-  --glow: rgba(0, 255, 213, 0.15);
-  --glow-strong: rgba(0, 255, 213, 0.25);
   
   /* Code Colors */
   --code-bg: #1a1a1a;
-  --code-keyword: #ff7edb;
-  --code-function: #00ffd5;
-  --code-string: #ffb86c;
-  --code-number: #bd93f9;
-  --code-comment: #6272a4;
-  --code-operator: #ff79c6;
-  --code-property: #50fa7b;
-  --code-variable: #f8f8f2;
+  --code-keyword: #569cd6;
+  --code-function: #4ec9b0;
+  --code-string: #ce9178;
+  --code-number: #b5cea8;
+  --code-comment: #6a9955;
+  --code-operator: #d4d4d4;
+  --code-property: #9cdcfe;
+  --code-variable: #e0e0e0;
   
   /* Font Variables */
   --font-main: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -157,10 +155,6 @@ body {
   background: var(--card);
   position: relative;
   transition: all 0.3s ease;
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow),
-    inset 0 0 5px var(--glow);
 }
 
 .post-item::after {
@@ -176,7 +170,6 @@ body {
   transition: all 0.3s ease;
   pointer-events: none;
   z-index: 1;
-  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .post-item::before {
@@ -194,10 +187,6 @@ body {
 
 .post-item:hover {
   transform: translateY(-2px);
-  box-shadow: 
-    0 0 20px var(--glow-strong),
-    0 0 30px var(--glow-strong),
-    inset 0 0 15px var(--glow-strong);
 }
 
 .post-item:hover::after {
@@ -253,10 +242,6 @@ body {
   border-radius: 4px;
   background: var(--card);
   position: relative;
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow),
-    inset 0 0 5px var(--glow);
   margin: 0 -2rem;
 }
 
@@ -272,7 +257,6 @@ body {
   opacity: 0.1;
   pointer-events: none;
   z-index: 1;
-  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .post-header {
@@ -286,9 +270,7 @@ body {
   font-size: 2.4rem;
   margin: 0 0 1rem;
   line-height: 1.2;
-  background: linear-gradient(45deg, var(--text) 30%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text);
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
   letter-spacing: 0.05em;
@@ -373,10 +355,6 @@ body {
   padding: 2rem !important;
   margin: 2rem 0 !important;
   position: relative !important;
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow),
-    inset 0 0 5px var(--glow) !important;
   overflow-x: auto !important;
 }
 
@@ -555,36 +533,6 @@ img {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes pulseGlow {
-  0% {
-    transform: scale(1);
-    opacity: 0.1;
-  }
-  50% {
-    transform: scale(1.01);
-    opacity: 0.15;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.1;
-  }
-}
-
-@keyframes borderGlow {
-  0%, 100% {
-    box-shadow: 
-      0 0 20px var(--glow-strong),
-      0 0 30px var(--glow-strong),
-      inset 0 0 15px var(--glow-strong);
-  }
-  50% {
-    box-shadow: 
-      0 0 25px var(--glow-strong),
-      0 0 35px var(--glow-strong),
-      inset 0 0 20px var(--glow-strong);
   }
 }
 
@@ -783,14 +731,10 @@ img {
   font-family: var(--font-mono);
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px var(--glow);
 }
 
 .social-link:hover {
   transform: translateY(-2px);
-  box-shadow: 
-    0 0 20px var(--glow-strong),
-    0 0 30px var(--glow-strong);
   color: var(--accent);
 }
 
@@ -912,7 +856,6 @@ img {
   border-radius: 4px;
   color: var(--text);
   position: relative;
-  overflow: hidden;
 }
 
 .terminal-effect::before {
@@ -957,19 +900,13 @@ img {
   background: var(--card);
   border: 1px solid var(--accent);
   border-radius: 4px;
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow),
-    inset 0 0 5px var(--glow);
 }
 
 .welcome-heading {
   font-family: var(--font-title);
   font-size: 2.4rem;
   margin: 0 0 1rem;
-  background: linear-gradient(45deg, var(--text) 30%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text);
   animation: fadeInUp 0.8s ease forwards;
 }
 
@@ -1134,9 +1071,6 @@ img {
 
 .commento-root {
   margin-top: 2rem;
-  
-  
-  
 }
 
 /* Comment Cards */
@@ -1147,14 +1081,9 @@ img {
   padding: 1rem !important;
   margin: 1rem 0 !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 0 5px var(--glow) !important;
 }
 
 .commento-root .commento-card:hover {
-  
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow) !important;
   transform: translateY(-2px);
 }
 
@@ -1199,9 +1128,6 @@ img {
 
 .commento-root textarea:focus {
   border-color: var(--accent) !important;
-  box-shadow: 
-    0 0 10px var(--glow),
-    0 0 15px var(--glow) !important;
   outline: none !important;
 }
 
@@ -1223,9 +1149,6 @@ img {
 
 .commento-root .commento-submit-button:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 
-    0 0 20px var(--glow-strong),
-    0 0 30px var(--glow-strong) !important;
   color: var(--accent) !important;
 }
 
