@@ -2,7 +2,7 @@
 author: kekn9ne
 layout: post
 date: '2025-03-07 04:12 +0300'
-comments: false
+comments: true
 published: true
 title: >-
   The Digital Fortress: Why Websites Wage War Against Scraping (and Their
