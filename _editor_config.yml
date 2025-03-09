@@ -1,0 +1,86 @@
+# Jekyll Blog Editör Yapılandırması
+
+# Editör ayarları
+editor:
+  theme: 'default'  # 'default' veya 'monokai'
+  font_size: 14
+  line_height: 1.6
+  tab_size: 2
+  line_numbers: true
+  line_wrapping: true
+  auto_close_brackets: true
+  auto_close_tags: true
+  highlight_active_line: true
+  spell_check: false
+  word_wrap: true
+
+# Önizleme ayarları
+preview:
+  auto_refresh: true
+  scroll_sync: true
+  highlight_code: true
+  emoji_support: true
+  math_support: false
+  mermaid_support: false
+
+# Varsayılan front matter şablonu
+default_front_matter:
+  layout: post
+  author: ''
+  categories: []
+  tags: []
+  comments: true
+  published: true
+  image: ''
+  description: 'test'
+
+# Özel kategoriler ve etiketler
+categories:
+  - Teknoloji
+  - Yazılım
+  - Tasarım
+  - Yaşam
+  - Seyahat
+
+tags:
+  - javascript
+  - python
+  - web
+  - mobil
+  - yapay-zeka
+  - veri-bilimi
+  - ui-ux
+  - devops
+
+# Dosya adı formatı
+filename_format: ':year-:month-:day-:title'
+
+# Medya yükleme ayarları
+media:
+  upload_path: 'assets/images'
+  allowed_types:
+    - jpg
+    - jpeg
+    - png
+    - gif
+    - svg
+  max_file_size: 5242880  # 5MB
+
+# Yedekleme ayarları
+backup:
+  auto_save: true
+  save_interval: 300  # 5 dakika
+  max_backups: 10
+  backup_path: '_drafts/backups'
+
+# Klavye kısayolları
+shortcuts:
+  save: 'Ctrl+S'
+  preview: 'Ctrl+P'
+  bold: 'Ctrl+B'
+  italic: 'Ctrl+I'
+  link: 'Ctrl+L'
+  image: 'Ctrl+Shift+I'
+  code: 'Ctrl+K'
+  undo: 'Ctrl+Z'
+  redo: 'Ctrl+Shift+Z' 
